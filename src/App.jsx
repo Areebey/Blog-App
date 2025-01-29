@@ -2,12 +2,11 @@
 import './App.css'
 
 function App() {
-  console.log(import.meta.env.VITE_APPWRITE_URL)
   return (
     <>
-    <h1>The Mega Blog App with Appwrite</h1>      
+    <h1 className='text-3xl text-green-500' >Hello</h1>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
