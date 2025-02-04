@@ -46,7 +46,7 @@ export class AuthService{
 
     async logout(){
         try {
-            await this.account.deleteSession();
+           return await this.account.deleteSession();
         } catch (error) {
             console.log("Appwite service, Logout", error);
         }
