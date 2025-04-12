@@ -4,6 +4,11 @@ import Container from "./container/Container.jsx";
 import Logo from "./Logo.jsx";
 import LogoutBtn from "./Header/LogoutBtn.jsx";
 import RTE from "./RTE.jsx";
+import Signup from "./Signup.jsx";
+import Signin from "Signin.jsx";
+import Post from ".Post";
+import PostForm from "post-form/PostForm"
+import PostCard from "PostCard.jsx";
 
 export {
     Header,
@@ -11,5 +16,10 @@ export {
     Container,
     Logo,
     LogoutBtn,
-    RTE
+    RTE,
+    Signup,
+    Signin,
+    Post,
+    PostForm,
+    PostCard
 }
