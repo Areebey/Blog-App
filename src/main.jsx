@@ -5,66 +5,69 @@ import App from './App.jsx'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { AuthLayout, Post, Signup } from './components/index.js'
+import Home from './pages/Home.jsx'
+import { AuthLayout, Login } from './components/index.js'
 
+import AddPost from './pages/AddPost'
+import Signup from './pages/Signup'
+import EditPost from './pages/EditPost'
+import Post from './pages/Post'
+import AllPosts from './pages/AllPosts'
 
 const router = createBrowserRouter([
   {
     path:'/',
     element: <App/>,
-    children:[
+    children: [
       {
-        path:'/',
-        element: <Home/>
+        path: '/',
+        element: <Home />
       },
       {
-        path:'./login',
-        element:(
+        path: '/login',
+        element: (
           <AuthLayout authentication={false}>
-            <Login/>
+            <Login />
           </AuthLayout>
         )
       },
       {
-        path:'./signup',
-        element:(
+        path: '/signup',
+        element: (
           <AuthLayout authentication={false}>
-            <Signup/>
+            <Signup />
           </AuthLayout>
         )
       },
       {
-        path:'/all-posts',
-        element:(
+        path: '/all-posts',
+        element: (
           <AuthLayout authentication>
-            {" "}
-            <AllPosts/>
+            <AllPosts />
           </AuthLayout>
         )
       },
       {
-        path:'/add-post',
-        element:(
+        path: '/add-post',
+        element: (
           <AuthLayout authentication>
-            {" "}
-            <AddPost/>
+            <AddPost />
           </AuthLayout>
         )
       },
       {
-        path:'/edit-post/:slug',
-        element:(
+        path: '/edit-post/:slug',
+        element: (
           <AuthLayout authentication>
-            {" "}
-            <EditPost/>
+            <EditPost />
           </AuthLayout>
         )
       },
       {
-        path:'/post/:slug',
-        element:<Post/>
+        path: '/post/:slug',
+        element: <Post />
       }
-    ]
+    ]    
   }
 ])
 
